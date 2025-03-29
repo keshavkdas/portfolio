@@ -1,3 +1,4 @@
+// Smooth scrolling for navigation
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -6,7 +7,8 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-const roles = ["Developer", "Designer", "Freelancer", "Tech Enthusiast"];
+// Typing animation effect
+const roles = ["Web Developer", "Designer", "Freelancer", "Tech Enthusiast"];
 let roleIndex = 0;
 
 function changeRole() {
@@ -14,8 +16,9 @@ function changeRole() {
     roleIndex = (roleIndex + 1) % roles.length;
 }
 setInterval(changeRole, 2000);
-changeRole(); 
+changeRole();
 
+// Live clock
 function updateClock() {
     const now = new Date();
     const timeString = now.toLocaleTimeString();
@@ -24,6 +27,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
+// Dark mode toggle
 document.getElementById("dark-mode-toggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
     localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode"));
@@ -33,6 +37,7 @@ if (localStorage.getItem("dark-mode") === "true") {
     document.body.classList.add("dark-mode");
 }
 
+// Contact form validation
 document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -54,6 +59,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     this.reset();
 });
 
+// Back to top button
 const backToTop = document.getElementById("back-to-top");
 window.addEventListener("scroll", () => {
     backToTop.style.display = window.scrollY > 300 ? "block" : "none";
