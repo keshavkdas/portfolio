@@ -18,18 +18,8 @@ function changeRole() {
 setInterval(changeRole, 2000);
 changeRole();
 
-// Live clock
-function updateClock() {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString();
-    document.getElementById("clock").textContent = `🕒 ${timeString}`;
-}
-setInterval(updateClock, 1000);
-updateClock();
-
-// Dark mode toggle (Fixed)
-const darkModeToggle = document.getElementById("dark-mode-toggle");
-darkModeToggle.addEventListener("click", function() {
+// Dark mode toggle
+document.getElementById("dark-mode-toggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
     localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode"));
 });
@@ -41,21 +31,6 @@ if (localStorage.getItem("dark-mode") === "true") {
 // Contact form validation
 document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
-        return;
-    }
-
-    if (!/\S+@\S+\.\S+/.test(email)) {
-        alert("Please enter a valid email address.");
-        return;
-    }
-
     alert("Message Sent Successfully!");
     this.reset();
 });
