@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
+        <h1 id="typing-text"></h1>
         <p>Welcome to my portfolio</p>
         <button id="dark-mode-toggle">🌙 Toggle Dark Mode</button>
     </header>
@@ -32,10 +32,23 @@
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
+    <h2>Contact Me</h2>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+        </div>
+
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
+
     <script src="script.js"></script>
+    <button id="back-to-top">⬆️</button>
 </body>
 </html>
