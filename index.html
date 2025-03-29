@@ -16,7 +16,9 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -24,31 +26,59 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Write something about yourself here.</p>
+        <a href="resume.pdf" download class="resume-btn">📥 Download Resume</a>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skill">
+            <p>HTML</p>
+            <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <div id="projects-container"></div> <!-- Projects will be added dynamically -->
+        <div id="projects-container"></div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Amazing work! Highly recommend!"</p>
+            <h4>- John Doe</h4>
+        </div>
+        <div class="testimonial">
+            <p>"A talented developer with great attention to detail."</p>
+            <h4>- Jane Smith</h4>
+        </div>
     </section>
 
     <section id="contact">
-    <h2>Contact Me</h2>
-        <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-        </div>
-
+        <h2>Contact Me</h2>
         <form id="contact-form">
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+        </div>
     </section>
 
+    <button id="back-to-top">⬆️</button>
 
     <script src="script.js"></script>
-    <button id="back-to-top">⬆️</button>
 </body>
 </html>
