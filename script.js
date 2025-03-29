@@ -27,8 +27,9 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// Dark mode toggle
-document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+// Dark mode toggle (Fixed)
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+darkModeToggle.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
     localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode"));
 });
