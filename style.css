@@ -39,3 +39,44 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode header {
+    background: #111;
+}
+
+.dark-mode section {
+    background: #333;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#dark-mode-toggle {
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#dark-mode-toggle:hover {
+    background: #ffaa00;
+}
+
+.project {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .project {
+    background: #444;
+}
+
