@@ -1,17 +1,24 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
     background-color: #f4f4f4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
+/* Header Styling */
 header {
     background: #333;
     color: white;
     padding: 20px;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -26,8 +33,14 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Section Styling */
 section {
     padding: 50px;
 }
@@ -38,57 +51,33 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-body.dark-mode {
-    background-color: #222;
-    color: white;
+#about:hover, #projects:hover, #contact:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode header {
-    background: #111;
-}
-
-.dark-mode section {
-    background: #333;
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-#dark-mode-toggle {
-    background: #ffcc00;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-#dark-mode-toggle:hover {
-    background: #ffaa00;
-}
-
+/* Projects Section */
 .project {
     background: white;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.dark-mode .project {
-    background: #444;
-}
-body {
-    font-family: "Poppins", sans-serif;
-    transition: background 0.3s, color 0.3s;
-}
-
-h1, h2, h3 {
-    transition: transform 0.3s;
-}
-
-h1:hover, h2:hover, h3:hover {
+.project:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode header {
