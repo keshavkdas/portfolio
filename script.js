@@ -5,3 +5,29 @@ document.querySelectorAll('nav a').forEach(anchor => {
         target.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+const toggleButton = document.getElementById("dark-mode-toggle");
+
+toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
+
+const projects = [
+    { name: "Project 1", description: "Description of project 1", link: "#" },
+    { name: "Project 2", description: "Description of project 2", link: "#" },
+    { name: "Project 3", description: "Description of project 3", link: "#" }
+];
+
+const projectsContainer = document.getElementById("projects");
+
+projects.forEach(proj => {
+    const projectDiv = document.createElement("div");
+    projectDiv.classList.add("project");
+    projectDiv.innerHTML = `
+        <h3>${proj.name}</h3>
+        <p>${proj.description}</p>
+        <a href="${proj.link}" target="_blank">View Project</a>
+    `;
+    projectsContainer.appendChild(projectDiv);
+});
+
