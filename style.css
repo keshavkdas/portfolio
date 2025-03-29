@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,17 +7,14 @@ body {
     color: #333;
 }
 
-/* Header with Background Image */
 header {
     position: relative;
     background: url('header-bg.jpg') no-repeat center center/cover;
     color: white;
     padding: 80px 20px;
-    text-align: center;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Navigation */
 nav {
     background: rgba(0, 0, 0, 0.8);
     padding: 12px 0;
@@ -35,7 +31,6 @@ nav a:hover {
     color: #ffd166;
 }
 
-/* Projects Section */
 #projects {
     background: url('projects-bg.jpg') no-repeat center center/cover;
     padding: 60px 20px;
@@ -45,13 +40,11 @@ nav a:hover {
     animation: slideUp 1s ease-in-out;
 }
 
-/* Links Section */
 #links {
     background: url('links-bg.jpg') no-repeat center center/cover;
     color: white;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -62,7 +55,6 @@ nav a:hover {
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Dark Mode */
 body.dark-mode {
     background: #1b1b1b;
     color: white;
@@ -76,7 +68,6 @@ body.dark-mode {
     background: url('projects-dark.jpg') no-repeat center center/cover;
 }
 
-/* Back to Top Button */
 #back-to-top {
     position: fixed;
     bottom: 20px;
