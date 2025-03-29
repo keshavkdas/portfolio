@@ -6,27 +6,51 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-const toggleButton = document.getElementById("dark-mode-toggle");
-toggleButton.addEventListener("click", () => {
+const roles = ["Developer", "Designer", "Freelancer", "Tech Enthusiast"];
+let roleIndex = 0;
+
+function changeRole() {
+    document.getElementById("dynamic-role").textContent = roles[roleIndex];
+    roleIndex = (roleIndex + 1) % roles.length;
+}
+setInterval(changeRole, 2000);
+changeRole(); 
+
+function updateClock() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    document.getElementById("clock").textContent = `🕒 ${timeString}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+document.getElementById("dark-mode-toggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode"));
 });
 
-const projects = [
-    { name: "Project 1", description: "Description of project 1", link: "#" },
-    { name: "Project 2", description: "Description of project 2", link: "#" }
-];
-
-const projectsContainer = document.getElementById("projects-container");
-projects.forEach(proj => {
-    const projectDiv = document.createElement("div");
-    projectDiv.classList.add("project");
-    projectDiv.innerHTML = `<h3>${proj.name}</h3><p>${proj.description}</p><a href="${proj.link}">View Project</a>`;
-    projectsContainer.appendChild(projectDiv);
-});
+if (localStorage.getItem("dark-mode") === "true") {
+    document.body.classList.add("dark-mode");
+}
 
 document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
-    alert("Message Sent! (This is a demo, implement backend for real messages)");
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    alert("Message Sent Successfully!");
     this.reset();
 });
 
@@ -37,25 +61,3 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-const sections = document.querySelectorAll("section");
-function revealSections() {
-    sections.forEach(section => {
-        if (section.getBoundingClientRect().top < window.innerHeight - 100) {
-            section.classList.add("visible");
-        }
-    });
-}
-window.addEventListener("scroll", revealSections);
-revealSections();
-
-const text = "Your Name";
-let i = 0;
-function typeEffect() {
-    if (i < text.length) {
-        document.getElementById("typing-text").textContent += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 150);
-    }
-}
-window.onload = typeEffect;
