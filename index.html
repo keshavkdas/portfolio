@@ -3,68 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keshav K Das - Portfolio</title>
+    <title>Keshav K Das | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1 id="typing-text">Keshav K Das</h1>
-        <p class="subtitle">I am a <span id="dynamic-role"></span></p>
-        <button id="dark-mode-toggle">🌙</button>
-        <div id="clock"></div>
+        <h1>Keshav K Das</h1>
+        <p class="subtitle">Web Developer | Electronics & Computer Engineer | AI Enthusiast</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#links">Links</a></li>
+            <li><button id="dark-mode-toggle">Toggle Dark Mode</button></li>
         </ul>
     </nav>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Keshav K Das, a passionate Web Developer and Engineer specializing in Electronics and Computer Engineering. 
-           With expertise in Android development, cybersecurity, AI applications, and automation, I love building interactive and secure digital solutions. 
-           I have experience in CI/CD security and have developed projects integrating ESP32, MySQL, and Python.</p>
-        <a href="Keshav_K_Das_Resume.pdf" download class="resume-btn">📥 Download Resume</a>
+        <p>I specialize in Web Development, Electronics, and Computer Engineering with expertise in Android development, cybersecurity, and automation.</p>
+        <a href="Keshav_K_Das_Resume.pdf" download class="resume-btn">Download Resume</a>
     </section>
 
     <section id="projects">
         <h2>My Projects</h2>
         <div class="project-container">
             <div class="project">
-                <div class="project-info">
-                    <h3>BLE-Based Attendance System</h3>
-                    <p>Integrated ESP32, MySQL, and Python to create a smart attendance tracking system.</p>
-                    <a href="#">View Project</a>
-                </div>
+                <h3>BLE-Based Attendance System</h3>
+                <p>Integrating ESP32, MySQL, and Python for automated attendance tracking.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="links">
-        <h2>Find Me Online</h2>
-        <div class="social-links">
-            <a href="https://github.com/KeshavDas" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/KeshavDas" target="_blank">LinkedIn</a>
-            <a href="https://yourwebsite.com" target="_blank">Personal Website</a>
+            <div class="project">
+                <h3>AI-Powered Assistive Tool</h3>
+                <p>Helping visually impaired users with object detection and real-time narration.</p>
+            </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
         <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
-    <button id="back-to-top">⬆️</button>
+    <button id="back-to-top">↑</button>
 
     <script src="script.js"></script>
 </body>
