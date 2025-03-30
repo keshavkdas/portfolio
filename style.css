@@ -1,5 +1,6 @@
+/* General */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -7,77 +8,71 @@ body {
     color: #333;
 }
 
-/* Vibrant Header */
+/* Compact Header */
 header {
-    position: relative;
     background: linear-gradient(45deg, #ff6600, #ffcc00);
     color: white;
-    padding: 80px 20px;
-    animation: fadeIn 1.5s ease-in-out;
+    padding: 40px 10px; /* Reduced padding */
+    font-size: 14px;
 }
 
-/* Navbar */
+/* Compact Navbar */
 nav {
     background: #222;
-    padding: 12px 0;
+    padding: 8px 0;
 }
-
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
+    font-size: 14px; /* Smaller size */
 }
 
-nav a:hover {
-    color: #ffd166;
+/* Compact Sections */
+section {
+    padding: 30px 10px; /* Less padding */
+    max-width: 750px; /* Smaller width */
+    margin: auto;
 }
 
-/* Projects Section with Vibrant Colors */
-#projects {
-    background: linear-gradient(45deg, #007bff, #00c8ff);
-    padding: 60px 20px;
-    color: white;
+/* Project Grid */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Reduce spacing */
 }
-
 .project {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    animation: slideUp 1s ease-in-out;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    width: 300px; /* Smaller card size */
+    border-radius: 8px;
 }
 
-/* Links Section */
-#links {
-    background: linear-gradient(45deg, #ff1493, #ff4500);
-    color: white;
-    padding: 50px 20px;
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Less spacing */
+}
+#contact-form input, 
+#contact-form textarea {
+    padding: 8px;
+    width: 100%;
 }
 
-/* Buttons */
+/* Compact Buttons */
 .resume-btn, #dark-mode-toggle, #back-to-top {
-    background: #ff6600;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.resume-btn:hover, #dark-mode-toggle:hover, #back-to-top:hover {
-    background: #e65c00;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    padding: 8px 12px; /* Smaller buttons */
+    font-size: 14px;
 }
 
 /* Dark Mode */
@@ -85,28 +80,6 @@ body.dark-mode {
     background: #1b1b1b;
     color: white;
 }
-
 .dark-mode nav {
     background: #121212;
-}
-
-.dark-mode #projects {
-    background: linear-gradient(45deg, #002766, #0051a3);
-}
-
-.dark-mode #links {
-    background: linear-gradient(45deg, #880e4f, #c2185b);
-}
-
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    background: #ff6600;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
 }
